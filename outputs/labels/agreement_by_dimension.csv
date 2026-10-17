@@ -1,0 +1,8 @@
+dimension,question,n_items,n_both_labelled,percent_agreement,cohen_kappa,labels_are_human,note
+tone,tone,359,0,,,False,column absent
+selection_and_salience,salience,359,0,,,False,column absent
+framing,framing_level_vs_rate,359,0,,,False,column absent
+framing,framing_household_vs_macro,359,0,,,False,column absent
+framing,framing_current_vs_forecast,359,0,,,False,column absent
+factual_calibration,calibration,359,0,,,False,column absent
+political_attribution,attribution,359,0,,,False,column absent

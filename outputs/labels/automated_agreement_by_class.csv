@@ -1,0 +1,4 @@
+class,n_annotator_a,n_annotator_b,n_both,specific_agreement
+negative,46,122,27,0.32142857142857145
+neutral,253,184,149,0.6819221967963387
+positive,60,53,24,0.4247787610619469

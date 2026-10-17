@@ -1,0 +1,11 @@
+dimension,classifier,swap,n_eligible,n_flipped,flip_rate
+tone,lexicon,political_name,55,0,0.0
+tone,finbert,political_name,55,4,0.07272727272727272
+framing_level_vs_rate,framing_lexicon,political_name,55,0,0.0
+framing_household_vs_macro,framing_lexicon,political_name,55,0,0.0
+framing_current_vs_forecast,framing_lexicon,political_name,55,0,0.0
+tone,lexicon,source_label,359,0,0.0
+tone,finbert,source_label,359,21,0.0584958217270195
+framing_level_vs_rate,framing_lexicon,source_label,359,0,0.0
+framing_household_vs_macro,framing_lexicon,source_label,359,0,0.0
+framing_current_vs_forecast,framing_lexicon,source_label,359,0,0.0

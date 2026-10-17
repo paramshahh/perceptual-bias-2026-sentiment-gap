@@ -1,0 +1,164 @@
+Final Course Project: AI, Economic Perceptions, and Consumer Sentiment Ahead of
+the 2026 Midterm Elections
+Course: AI Applications in Finance
+Duration: Six days
+Deliverables: Research report, reproducible analysis, monitoring dashboard, and
+summary Power Point presentation
+Project objective
+Develop and validate an AI-assisted framework to measure economic narratives in news
+and social media and investigate whether they help explain differences between US
+consumer sentiment and measured economic conditions ahead of the 2026 midterm
+elections.
+Your central task is to distinguish among three possible explanations:
+    • Consumers are responding to economic pressures inadequately captured by
+       headline indicators.
+    • Consumers’ perceptions reﬂect selective information, framing, or cognitive biases.
+    • The apparent discrepancy reﬂects measurement differences, timing, or an
+       incomplete statistical model.
+Do not assume that pessimism is irrational, that negative coverage is biased, or that
+media exposure causes declining sentiment. These are hypotheses to test.
+Required research questions
+Your project must address:
+    1. How can we measure bias in news coverage or social media?
+    2. How can we determine the impact that such bias may be having on depressing
+       US consumer sentiment, as measured by the University of Michigan survey,
+       ahead of the upcoming midterm elections?
+    3. How much of the apparent sentiment discrepancy can unemployment, inﬂation,
+       and real GDP growth explain?
+    4. Which candidate perceptual mechanisms—such as negativity bias, availability bias,
+       conﬁrmation bias, or anchoring to past prices—can your data actually measure?
+    5. Does media analysis improve predictions of consumer sentiment beyond economic
+       indicators alone?
+    6. What evidence would contradict a media-bias explanation?
+1. Establish the economic and survey baseline
+Construct a historical dataset with a monthly analysis frequency, preferably beginning in
+2010, and a focused monitoring window covering the months preceding the 2026 elections.
+Include these required measures:
+ Measure                          Required treatment
+University of Michigan Index of Separate the headline index, Current Economic
+Consumer Sentiment              Conditions, and Consumer Expectations where available.
+BLS U-3 unemployment rate      Use the seasonally adjusted official unemployment rate.
+                                Calculate year-over-year inﬂation as 100 × (PCE price
+Headline PCE inﬂation
+                                index / its value 12 months earlier − 1).
+                                Use quarterly real GDP growth; clearly distinguish quarter-
+Real GDP growth                 over-quarter annualized growth from year-over-year
+                                growth.
+Michigan’s survey covers personal ﬁnances, business conditions, and buying conditions,
+including expectations; it is not a direct rating of these three macroeconomic statistics.
+University of Michigan
+U-3 measures unemployment relative to the civilian labor force. Obtain unemployment
+data from the BLS, and PCE prices and real GDP from the BEA PCE page and BEA GDP
+page.
+Record observation periods, publication dates, and revisions. Use only information
+available by each prediction date. Do not interpolate quarterly GDP into artiﬁcial monthly
+observations or use subsequently released GDP estimates to explain earlier perceptions.
+Estimate an economic-only model and deﬁne a sentiment gap as observed sentiment
+minus the model’s out-of-sample prediction. Report prediction intervals. A negative
+residual is unexplained pessimism under your model—not proof of perceptual bias.
+Test alternative explanations using a manageable set of controls, such as real household
+income, cumulative price increases, housing affordability, debt-service burdens, labor
+underutilization, or policy uncertainty. Explain why falling inﬂation need not reverse
+concern about already elevated prices, and why aggregate growth may differ from
+household experience.
+2. Build a balanced media corpus
+Collect economic coverage from a documented selection of national and local news
+sources and at least one social-media platform. If historical platform access is limited,
+narrow your claims accordingly.
+Document:
+    • Search terms, dates, source selection, and inclusion criteria.
+    • Whether observations represent headlines, full articles, posts, or comments.
+    • Geographic relevance and available audience information.
+    • Duplicate stories, reposts, advertisements, and suspected automated activity.
+    • Missing data, access restrictions, and sampling limitations.
+Distinguish content supply, engagement, and actual exposure. Likes and reposts are
+imperfect attention measures; they do not establish what survey respondents
+encountered.
+3. Measure coverage and candidate biases with AI
+Develop a coding scheme before applying an LLM or other NLP model. Measure at least
+four dimensions:
+Dimension         Example operational measure
+                 Negative, neutral, or positive economic language, separating factual
+Tone
+                 description from emotional wording.
+Selection and    Relative attention to layoffs, hiring, rising prices, falling inﬂation, growth,
+salience         and recession risk.
+                 Emphasis on price levels versus inﬂation rates, national aggregates
+Framing
+                 versus household experiences, and current conditions versus forecasts.
+Factual          Whether numerical claims match the official information available at
+calibration      publication, with deﬁnitions and uncertainty handled correctly.
+Political        Which institutions or political actors receive credit or blame, without
+attribution      equating criticism with bias.
+Deﬁne the benchmark against which each proposed bias is measured. Compare coverage
+of similar economic releases, equivalent positive and negative surprises, or the same
+events across sources.
+Human-label a stratiﬁed sample of at least 300 items using two independent annotators.
+Report agreement, adjudication procedures, and AI performance by class and source.
+Compare the AI approach with a simple dictionary or conventional classiﬁer.
+Preserve model versions, prompts, and evidence excerpts. Test whether changing political
+names or source labels alters classiﬁcations of otherwise identical text.
+Text can establish framing or selective coverage; it cannot, by itself, establish a
+reader’s cognitive bias. Claims about conﬁrmation or availability bias require
+corresponding exposure, recall, belief, or experimental evidence.
+4. Evaluate association and causal impact separately
+Compare three models:
+    1. Economic indicators only.
+    2. Economic indicators plus media measures.
+    3. Economic indicators, media measures, and additional household or political
+        controls.
+Use chronological holdouts or rolling forecasts. Report predictive accuracy, coefficient
+stability, uncertainty, and sensitivity to alternative speciﬁcations. Account for
+autocorrelation, seasonality, lag selection, and multiple testing.
+For causal analysis, choose one feasible design:
+    • Randomized framing experiment: Assign consenting participants balanced factual
+        summaries or alternative truthful framings of the same economic information.
+        Measure changes in beliefs and sentiment-related responses.
+    • Quasi-experiment: Exploit plausibly external differences in media exposure,
+        explaining treatment assignment, assumptions, spillovers, and pre-trends.
+    • Observational analysis with a causal-design proposal: Estimate associations and
+        provide a detailed plan for stronger identiﬁcation if suitable exposure data are
+        unavailable.
+Address reverse causality: pessimistic consumers may seek negative content, and
+publishers may respond to audience demand. Economic shocks may also affect both
+coverage and sentiment.
+An experimental effect on your sample does not establish an effect on the national
+Michigan index. Explain what exposure estimates, representative sampling, weighting, and
+transportability assumptions would be needed to make that connection.
+5. Track the pre-election period
+Create an updateable dashboard displaying:
+    • Consumer sentiment and its economic-model prediction, with uncertainty.
+    • The sentiment gap.
+    • Media tone, framing, salience, and factual-calibration measures.
+    • Relevant economic releases and major events.
+    • Source composition, missingness, and model-performance indicators.
+Where data permit, examine differences by income, age, geography, and political
+affiliation. Michigan has documented partisan differences in economic perceptions; treat
+affiliation as a potential moderator and confounder. University of Michigan
+Assess survey-method comparability, including Michigan’s transition to web collection and
+subsequent methodological reports. Michigan methodology announcement, 2026 reports
+Do not attribute a change to election proximity merely because it occurred during the
+campaign. If your project ﬁnishes before election day, state the cutoff and provide a
+prospective update plan.
+Deliverables and assessment
+Submit:
+    • A 10-12-page report answering the research questions and separating ﬁndings from
+         hypotheses.
+    • A reproducible analytical package with data provenance, prompts, code, and a
+         human-labeling guide.
+    • A monitoring dashboard.
+    • A 6-8-minute presentation explaining one practical implication for ﬁnancial
+         forecasting or risk management.
+Criterion                                                      Weight
+Economic measurement, timing, and alternative explanations 20%
+Corpus design and validated AI measurement                     25%
+Statistical analysis and causal reasoning                      30%
+Reproducibility and dashboard quality                          15%
+Communication, limitations, and research ethics                10%
+Use public or appropriately licensed data, protect participant privacy, and obtain required
+institutional approval before human-subject research. Keep the project focused on
+measurement and ﬁnancial analysis.
+A rigorous ﬁnding that media bias does not explain the sentiment gap can earn full
+credit. The quality of the evidence and reasoning matters more than the direction of
+the conclusion.
+

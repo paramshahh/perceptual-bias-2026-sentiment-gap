@@ -1,0 +1,7 @@
+source_type,n_events,n_items,mean_deviation,mean_tone
+aggregator,265,304,0.0,0.0
+algo_finance,18,18,0.0,0.0
+foreign,118,138,0.0,0.07971014492753623
+national_news,377,475,0.0,-0.010526315789473684
+other,556,2651,0.0,0.01093926820067899
+wire_or_pr,50,56,0.0,0.07142857142857142

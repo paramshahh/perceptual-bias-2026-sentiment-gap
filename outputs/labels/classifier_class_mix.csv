@@ -1,0 +1,7 @@
+classifier,class,n_predicted,share_predicted
+lexicon,negative,46,0.12813370473537605
+lexicon,neutral,253,0.7047353760445683
+lexicon,positive,60,0.1671309192200557
+finbert,negative,122,0.3398328690807799
+finbert,neutral,184,0.5125348189415042
+finbert,positive,53,0.14763231197771587
